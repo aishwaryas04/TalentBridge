@@ -1,0 +1,179 @@
+
+.my-applications {
+  min-height: 100vh;
+  padding: 35px;
+  background-color: #f4f6fb;
+
+  .applications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    h1 {
+      color: #172554;
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #666;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #172554;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #243b75;
+      }
+    }
+  }
+
+  .applications-summary {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+
+    h2 {
+      color: #2563eb;
+      font-size: 20px;
+    }
+  }
+
+  .applications-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    .application-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+
+      .application-info {
+        h2 {
+          color: #172554;
+          font-size: 21px;
+          margin-bottom: 8px;
+        }
+
+        h3 {
+          color: #2563eb;
+          font-size: 16px;
+          margin-bottom: 15px;
+        }
+
+        .application-details {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+
+          p {
+            color: #666;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .application-status {
+        span {
+          display: inline-block;
+          padding: 9px 15px;
+          border-radius: 20px;
+          font-size: 13px;
+          font-weight: bold;
+        }
+
+        .pending {
+          background-color: #fff7ed;
+          color: #c2410c;
+        }
+
+        .under-review {
+          background-color: #eff6ff;
+          color: #1d4ed8;
+        }
+
+        .shortlisted {
+          background-color: #dcfce7;
+          color: #15803d;
+        }
+
+        .rejected {
+          background-color: #fee2e2;
+          color: #dc2626;
+        }
+
+        .hired {
+          background-color: #f3e8ff;
+          color: #7e22ce;
+        }
+      }
+    }
+
+    .no-applications {
+      background-color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 12px;
+
+      h2 {
+        color: #172554;
+        margin-bottom: 12px;
+      }
+
+      p {
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      button {
+        padding: 12px 22px;
+        background-color: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #1d4ed8;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .my-applications {
+    padding: 20px;
+
+    .applications-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .applications-container {
+      .application-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .application-details {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  }
+}
